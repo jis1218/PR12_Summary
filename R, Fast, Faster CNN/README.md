@@ -34,3 +34,15 @@
 ##### 참고
 ##### https://blog.naver.com/kyb7902/221012988041
 ##### https://blog.naver.com/lyshyn/221319139310
+
+##### Fast R-CNN
+##### Conv feature map을 RoI pooling을 한다. 각각 다른 크기의 RoI가 나오겠지만 똑같은 크기의 output이 나오도록 max pooling을 한다.
+##### 엉뚱한 걸 잡으면 BBox에 대한 loss function은 사라짐
+##### 하지만 Selective Search 하는데 시간이 많이 걸림(CPU에서 돈다)
+
+##### Faster R-CNN
+##### Region Proposal Network + Fast R-CNN
+##### RPN은 어떻게?
+##### Network를 가볍게 하기 위해 classification -> 물체가 있는지 없는지만 확인
+##### Sliding은 k개의 Anchor Box, 논문에서는 9개의 Box 사용
+
